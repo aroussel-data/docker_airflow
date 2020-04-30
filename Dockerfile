@@ -10,7 +10,7 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN export SLUGIFY_USES_TEXT_UNIDECODE=yes && pip install --upgrade pip setuptools && pip install -r requirements.txt
 
-# Make port 80 available to the world outside this container
+# Make port 8885 available to the world outside this container
 EXPOSE 8885
 
 # Define environment variable
