@@ -3,6 +3,8 @@ Description=Airflow scheduler daemon
 
 [Service]
 ExecStart=/home/ubuntu/docker_airflow/airflow/scripts/scheduler.sh
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target

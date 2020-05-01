@@ -3,6 +3,8 @@ Description=Airflow webserver daemon
 
 [Service]
 ExecStart=/home/ubuntu/docker_airflow/airflow/scripts/server.sh
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
