@@ -1,0 +1,8 @@
+[Unit]
+Description=Airflow webserver daemon
+
+[Service]
+ExecStart=/home/ubuntu/docker_airflow/airflow/scripts/server.sh
+
+[Install]
+WantedBy=multi-user.target

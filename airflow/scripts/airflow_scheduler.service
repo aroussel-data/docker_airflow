@@ -1,0 +1,8 @@
+[Unit]
+Description=Airflow scheduler daemon
+
+[Service]
+ExecStart=/home/ubuntu/docker_airflow/airflow/scripts/scheduler.sh
+
+[Install]
+WantedBy=multi-user.target
