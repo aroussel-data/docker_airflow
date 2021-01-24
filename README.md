@@ -1,5 +1,5 @@
 # docker_airflow
-Repo for Apache's workflow management tool
+Repo for Apache's workflow management tool based on https://github.com/puckel/docker-airflow .
 
 **Prerequisites**
 - [docker](https://www.docker.com/)
