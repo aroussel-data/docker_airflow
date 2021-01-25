@@ -6,7 +6,8 @@ Repo for Apache's workflow management tool based on https://github.com/puckel/do
 - [docker-compose](https://docs.docker.com/compose/)
 
 **Running**
-- docker-compose up
+- CeleryExeuctor: `docker-compose up -d`
+- LocalExeuctor: `docker-compose -f docker-compose-local.yml up -d`
 - Airflow will be running on localhost:8080
 
 **NOTES**
