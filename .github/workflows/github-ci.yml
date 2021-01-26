@@ -12,15 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install pipenv
-      run: |
-        sudo apt install -y pipenv
-    - name: Install dependencies
-      run: |
+     - uses: actions/checkout@v1
+     - name: Set up Python 3.7
+       uses: actions/setup-python@v1
+       with:
+        python-version: 3.7
+     - name: Install pipenv
+       uses: dschep/install-pipenv-action@v1
+     - name: Install dependencies
+       run: |
         pipenv install --dev
         pipenv shell
-    - name: Lint with flake8
-      run: |
+     - name: Lint with flake8
+       run: |
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
