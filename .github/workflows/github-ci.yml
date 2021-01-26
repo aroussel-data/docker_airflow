@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: Install pipenv
       run: |
-        apt install pipenv
+        sudo apt install -y pipenv
     - name: Install dependencies
       run: |
         pipenv install --dev
