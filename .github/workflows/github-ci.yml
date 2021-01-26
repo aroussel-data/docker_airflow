@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install pipenv
+      run: |
+        apt install pipenv
     - name: Install dependencies
       run: |
         pipenv install --dev
